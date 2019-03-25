@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="helloWorld" class="HelloWorld" scope="prototype">
+       <property name="message" value="Hello World!"/>
+   </bean>
+   
+    <bean id="helloWorldSetterDemo" class="HelloWorldSetterDemo" scope="singleton" init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello World!"/>
+   </bean>
+   
+   <bean id="projector" class="Projector">
+        <property name="colour" value="red"></property>
+        <property name="model" value="ZX123"></property>
+   </bean>
+   
+   <bean id="room" class="Room">
+        <property name="length" value="5"></property>
+        <property name="breadth" value="5"></property>
+        <property name="height" value="5"></property>
+        <property name="projector" ref="projector"></property>
+   </bean>
+
+</beans>
