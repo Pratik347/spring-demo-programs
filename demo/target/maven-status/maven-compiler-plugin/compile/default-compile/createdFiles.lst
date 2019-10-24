@@ -1,0 +1,5 @@
+com\example\demo\DemoApplication.class
+com\example\demo\amenity\AmenityEntity.class
+com\example\demo\home\HomeController.class
+com\example\demo\amenity\AmenityController.class
+com\example\demo\amenity\AmenityService.class
